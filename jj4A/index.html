@@ -101,7 +101,7 @@ const [calc, setCalc] = React.useState({
 function handleClear(){
     setCalc({
     current: '0',
-    total: '',
+    total: '0',
     isInitial: true,
     preOP: ''
     });
@@ -115,7 +115,7 @@ function handleOperator(value){
     total: total.toString,
     isInitial: true,
     preOP: value
-    })
+    });
 }
 
 
