@@ -97,6 +97,16 @@ const [calc, setCalc] = React.useState({
     preOP: ''
 });
 
+// handle clear button
+function handleClear(){
+    setCalc({
+    current: '0',
+    total: '',
+    isInitial: true,
+    preOP: ''
+    });
+}
+
     return(
         
         <div className="calculator">
@@ -117,7 +127,7 @@ const [calc, setCalc] = React.useState({
             <CalcButton value="3" onClick={handleNumber}/>
             <CalcButton className="operator" value="+"/>
 
-            <CalcButton value="C" />
+            <CalcButton value="C" onClick={handleClear}/>
             <CalcButton value="0" onClick={handleNumber}/>
             <CalcButton className="operator" value="="/>
             <CalcButton className="operator" value="-"/>
